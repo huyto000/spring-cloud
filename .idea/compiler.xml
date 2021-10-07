@@ -9,12 +9,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gwcode" />
         <module name="booklisting" />
-        <module name="gateway" />
         <module name="filmlisting" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="booklisting" target="1.7" />
+      <module name="booklisting" target="11" />
       <module name="filmlisting" target="8" />
       <module name="gateway" target="8" />
       <module name="gwcode" target="8" />
