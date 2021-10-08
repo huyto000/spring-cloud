@@ -17,6 +17,8 @@ kind: Service
 metadata:
   name: book-service
 spec:
+  selector:
+    app: book-pod
   type: ClusterIP
   ports:
     - targetPort: 8081
@@ -46,6 +48,8 @@ kind: Service
 metadata:
   name: film-service
 spec:
+  selector:
+    app: film-pod
   type: ClusterIP
   ports:
     - targetPort: 8082
@@ -75,10 +79,13 @@ kind: Service
 metadata:
   name: gateway-service
 spec:
-  type: ClusterIP
+  selector:
+    app: gateway-pod
+  type: NodePort
   ports:
     - targetPort: 8080
       port: 8080
+      nodePort: 30080
 ---
 apiVersion: apps/v1
 kind: Deployment
