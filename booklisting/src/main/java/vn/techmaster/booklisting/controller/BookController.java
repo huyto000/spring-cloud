@@ -13,7 +13,7 @@ import vn.techmaster.booklisting.model.Book;
 @RestController
 @RequestMapping("/book")
 public class BookController {
-  @GetMapping("/books")
+  @GetMapping
   public ResponseEntity<List<Book>> getAllBooks() {
     List<Book> books = new ArrayList<>();
     books.add(new Book("Dế Mèn Phiêu Lưu Ký", "Tô Hoài"));

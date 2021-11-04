@@ -18,7 +18,7 @@ public class GatewayConfig {
   @Bean
   public RouteLocator gatewayRoutes(RouteLocatorBuilder builder) {
   return builder.routes()
-        .route(r -> r.path("/book/**").uri("http://localhost:8081/"))
+        .route(r -> r.path("/book/**").uri("http://booklisting-ser:8081/"))
         .route(r -> r
         .path("/film/**")
         .filters(f -> f.requestRateLimiter(c -> c.setRateLimiter(redisRateLimiter()).setStatusCode(HttpStatus.TOO_MANY_REQUESTS)))
