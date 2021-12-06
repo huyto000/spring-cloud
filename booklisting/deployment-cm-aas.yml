@@ -1,0 +1,50 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: cm-aas
+data:
+  application.properties: |-
+    server.port=8081
+    spring.main.web-application-type=reactive
+    logging.level.root = TRACE
+    logging.level.org.springframework.web = TRACE
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: book-service
+spec:
+  selector:
+    app: book-pod
+  type: ClusterIP
+  ports:
+    - targetPort: 8081
+      port: 8081
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: book-deployment
+spec:
+  selector:
+    matchLabels:
+      app: book-pod
+  template:
+    metadata:
+      labels:
+        app: book-pod
+    spec:
+      containers:
+        - name: book-container
+          image: huyto000/booklisting:env_3
+          ports:
+            - containerPort: 8081
+          volumeMounts:
+            - mountPath: /config
+              name: cm-aas-volume
+              readOnly: true
+      volumes:
+        - name: cm-aas-volume
+          configMap:
+            name: cm-aas
