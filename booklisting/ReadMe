@@ -1,0 +1,2 @@
+#create configmap from file
+kubectl create configmap cm-aas --from-file=application.properties=application.properties -n demo
