@@ -98,6 +98,7 @@
             </plugins>
         </pluginManagement>
     </build>
+
     <modules>
         <module>booklisting</module>
         <module>filmlisting</module>
