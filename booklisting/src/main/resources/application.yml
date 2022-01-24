@@ -1,0 +1,20 @@
+server:
+  port: 8081
+
+spring:
+  main:
+    web-application-type: reactive
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: nguyenvana4114@gmail.com
+    password: 1234567890aA@
+    properties:
+      mail:
+        smtp:
+          auth: true
+          #          ssl:
+          #            protocols: TLSv1.2
+          #            trust: mail.ptf.com.vn
+          starttls:
+            enable: true

@@ -1,60 +1,80 @@
 package vn.techmaster.booklisting.model;
 
+import com.opencsv.bean.CsvBindByName;
 import com.opencsv.bean.CsvBindByPosition;
 import com.opencsv.bean.CsvCustomBindByPosition;
 import vn.techmaster.booklisting.converter.BooleanConverter;
 
 
 public class UserExport {
+  @CsvBindByName(column = "xxx")
   @CsvBindByPosition(position = 0)
   private String userId;
+  @CsvBindByName(column = "xxx")
   @CsvBindByPosition(position = 1)
   private String fullName;
+  @CsvBindByName(column = "xxx")
   @CsvBindByPosition(position = 2)
   private String password;
+  @CsvBindByName(column = "xxx")
   @CsvBindByPosition(position = 3)
-  //    private String partnerId;
-  @CsvBindByPosition(position = 4)
   private String status = "ACTIVE";
-  @CsvBindByPosition(position = 5)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 4)
   private String groupId;
-  @CsvBindByPosition(position = 6)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 5)
   private String roleId;
-  @CsvBindByPosition(position = 7)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 6)
   private String saleId;
-  @CsvBindByPosition(position = 8)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 7)
   private String email;
-  @CsvBindByPosition(position = 9)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 8)
   private String losId;
-  @CsvBindByPosition(position = 10)
-  //bổ sung thêm trường
-  @CsvBindByPosition(position = 11)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 9)
   private String nationalId;//can cuoc cong dan
-  @CsvBindByPosition(position = 12)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 10)
   private String passport;//ho chieu
-  @CsvBindByPosition(position = 13)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 11)
   private String phone1;
-  @CsvBindByPosition(position = 14)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 12)
   private String phone2;
-  @CsvBindByPosition(position = 15)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 13)
   private String description;
-  @CsvBindByPosition(position = 16)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 14)
   private String regAdds;//dia chi thuong tru
-  @CsvBindByPosition(position = 17)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 15)
   private String currAdds;//dia chi hien tai
-  @CsvCustomBindByPosition(position = 18, converter = BooleanConverter.class)
+  @CsvBindByName(column = "xxx")
+  @CsvCustomBindByPosition(position = 16, converter = BooleanConverter.class)
   private Boolean isSuperAdmin = false;
-  @CsvCustomBindByPosition(position = 19, converter = BooleanConverter.class)
+  @CsvBindByName(column = "xxx")
+  @CsvCustomBindByPosition(position = 17, converter = BooleanConverter.class)
   private Boolean isDelete = false;
-  @CsvBindByPosition(position = 20)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 18)
   private String channelUser;
-  @CsvBindByPosition(position = 22)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 19)
   private String teamName;
-  @CsvBindByPosition(position = 23)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 20)
   private String userLos;
-  @CsvBindByPosition(position = 24)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 21)
   private String importedStatus;
-  @CsvBindByPosition(position = 25)
+  @CsvBindByName(column = "xxx")
+  @CsvBindByPosition(position = 22)
   private String error;
 
   public String getImportedStatus() {
